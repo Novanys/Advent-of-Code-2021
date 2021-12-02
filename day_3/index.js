@@ -16,7 +16,7 @@ for (const row of rows) {
 
 }
 
-console.log('part1: ', part1);
+console.log('part 1: ', part1);
 
 // Part 2
 let part2 = 0;
@@ -25,4 +25,4 @@ for (const row of rows) {
 
 }
 
-console.log('part2: ', part2);
+console.log('part 2: ', part2);
