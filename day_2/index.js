@@ -40,19 +40,17 @@ let part2 = {
 };
 
 for (const row of rows) {
-  if (row.direction === "forward") {
-    part2.horizontalPosition += row.units;
-
-    const addedDepth = part2.aim * row.units;
-    if (addedDepth > 0) {
-      part2.depth += addedDepth;
-    } else if (addedDepth < 0) {
-      part2.depth -= addedDepth;
-    }
-  } else if (row.direction === "up") {
-    part2.aim -= row.units;
-  } else if (row.direction === "down") {
-    part2.aim += row.units;
+  switch (row.direction) {
+    case 'forward':
+      part2.horizontalPosition += row.units;
+      part2.depth += part2.aim * row.units;
+      break;
+    case 'up':
+      part2.aim -= row.units;
+      break;
+    case 'down':
+      part2.aim += row.units;
+      break;
   }
 }
 
