@@ -25,4 +25,4 @@ for (const row of rows) {
 
 }
 
-console.log('part1: ', part2);
+console.log('part2: ', part2);
