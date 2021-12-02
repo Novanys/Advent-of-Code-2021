@@ -4,8 +4,8 @@ const puzzleInput = fs.readFileSync(path.join(__dirname, "input.txt"), {
   encoding: "utf-8",
 });
 
-const rows = puzzleInput.split("\n").map((x) => {
-  const [direction, units] = x.split(" ");
+const rows = puzzleInput.split("\n").map(row => {
+  const [direction, units] = row.split(" ");
   return { direction: direction, units: parseInt(units) };
 });
 
