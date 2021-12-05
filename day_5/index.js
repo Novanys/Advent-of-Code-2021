@@ -91,8 +91,7 @@ rows.forEach(row => {
 
   const isVertical = row.start.x === row.end.x;
   const isHorizontal = row.start.y === row.end.y;
-
-  let isDiagonal = maxY - minY === maxX - minX;
+  const isDiagonal = maxY - minY === maxX - minX;
 
   if (isVertical || isHorizontal) {
     for (let y = minY; y <= maxY; y++) {
