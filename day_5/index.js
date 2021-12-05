@@ -39,7 +39,7 @@ const createGrid = (max) => {
   return tempGrid;
 }
 
-const calculateOverlapping = grid => flatMap(grid).reduce((acc, curr) => {
+const countOverlaps = grid => flatMap(grid).reduce((acc, curr) => {
   if (curr > 1) {
     return acc + 1;
   }
@@ -68,7 +68,7 @@ rows.forEach(row => {
   }
 })
 
-console.log('Part 1: ', calculateOverlapping(part1Grid));
+console.log('Part 1: ', countOverlaps(part1Grid));
 
 fs.writeFileSync(path.join(__dirname, 'output_part_1_grid.txt'), part1Grid.map(x => {
   return x.map(y => {
@@ -112,7 +112,7 @@ rows.forEach(row => {
   }
 })
 
-console.log('Part 2: ', calculateOverlapping(part2Grid))
+console.log('Part 2: ', countOverlaps(part2Grid))
 
 fs.writeFileSync(path.join(__dirname, 'output_part_2_grid.txt'), part2Grid.map(x => {
   return x.map(y => {
